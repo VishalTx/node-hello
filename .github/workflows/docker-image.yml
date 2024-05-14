@@ -24,6 +24,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image to docker hub
+    
       run: docker push vishal7500/node-app
       
 
