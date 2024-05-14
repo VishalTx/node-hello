@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vishal7500/node-app:$(date +%s)
+      run: docker build . --file Dockerfile --tag vishal7500/node-app
 
     - name: Push Docker image to docker hub
-      run: docker push vishal7500/node-app:$(date +%s)
+      run: docker push vishal7500/node-app
