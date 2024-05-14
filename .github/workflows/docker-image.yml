@@ -18,10 +18,8 @@ jobs:
       run: docker build . --file Dockerfile --tag vishal7500/node-app
       
     - name: Login to Docker Hub
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
-      run: docker login -u "$DOCKERHUB_USERNAME" --password "$DOCKERHUB_PASSWORD"
+     
+      run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Push Docker image to docker hub
       run: |
