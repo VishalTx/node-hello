@@ -24,6 +24,6 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image to docker hub
-      run: docker push -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} vishal7500/node-app
+      run: docker push vishal7500/node-app
       
 
